@@ -11,6 +11,10 @@ app.use(cors())
 app.use(express.json());
 
 
+app.get("/",(req,res)=>{
+  res.send(" Welcome to my code converter server")
+})
+
 app.post('/convert', async (req, res) => {
   const { code,language } = req.body;
 
